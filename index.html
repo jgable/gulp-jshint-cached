@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gulp JSHint with Caching by jgable</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gulp JSHint with Caching</h1>
+        <p>A cached version of the gulp-jshint task</p>
+
+        <p class="view"><a href="https://github.com/jgable/gulp-jshint-cached">View the Project on GitHub <small>jgable/gulp-jshint-cached</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/jgable/gulp-jshint-cached/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jgable/gulp-jshint-cached/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jgable/gulp-jshint-cached">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="gulp-jshint-cached-" class="anchor" href="#gulp-jshint-cached-"><span class="octicon octicon-link"></span></a>gulp-jshint-cached <img src="https://secure.travis-ci.org/jgable/gulp-jshint-cached.png?branch=master" alt="status"> <img src="https://david-dm.org/jgable/gulp-jshint-cached.png" alt="dependencies">
+</h1>
+
+<p>A cached version of the <a href="https://github.com/wearefractal/gulp-jshint">gulp-jshint</a> task.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Literally a straight pass thru so you can pass all the <a href="https://github.com/wearefractal/gulp-jshint#options">same options</a> as <code>jshint(...)</code> but caches successful files so they aren't ran again unless they change.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">jshint</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-jshint-cached'</span><span class="p">);</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">'lint'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">'./lib/*.js'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">jshint</span><span class="p">.</span><span class="nx">cached</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">jshint</span><span class="p">.</span><span class="nx">reporter</span><span class="p">(</span><span class="s1">'YOUR_REPORTER_HERE'</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="caching" class="anchor" href="#caching"><span class="octicon octicon-link"></span></a>Caching</h2>
+
+<p>This method uses a small temp file cache based on a hash of the contents of the file, the JSHint version and the JSHint options passed in.  If a JSHint option is changed all files will be ran again to prevent false positives.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2014 <a href="http://jacobgable.com">Jacob Gable</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/jgable">jgable</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
