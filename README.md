@@ -8,7 +8,7 @@ A cached version of the [gulp-jshint](https://github.com/wearefractal/gulp-jshin
 Literally a straight pass thru so you can pass all the [same options](https://github.com/wearefractal/gulp-jshint#options) as `jshint(...)` but caches successful files so they aren't ran again unless they change.
 
 ```javascript
-var jshint = require('gulp-jshint');
+var jshint = require('gulp-jshint-cached');
 
 gulp.task('lint', function() {
   gulp.src('./lib/*.js')
