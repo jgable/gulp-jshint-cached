@@ -1,6 +1,6 @@
 {
   "name": "gulp-jshint-cached",
-  "version": "1.3.4",
+  "version": "1.3.4-1",
   "description": "A cached version of the gulp-jshint task",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,11 @@
     "should": "~2.1.1",
     "mocha": "~1.17.0",
     "gulp-util": "~2.2.9",
-    "jshint": "~2.4.1"
+    "jshint": "~2.4.1",
+    "sinon": "~1.7.3"
   },
   "dependencies": {
-    "gulp-cache": "0.0.4",
+    "gulp-cache": "~0.1.0",
     "gulp-jshint": "~1.3.4"
   }
 }

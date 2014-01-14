@@ -27,16 +27,13 @@ describe('gulp-jshint', function () {
 
             stream.once('data', function (newFile) {
                 should.exist(newFile.jshint);
-                should.not.exist(newFile.jshint.cached);
-
+                
                 newFile.jshint.success.should.equal(true);
 
                 stream.once('data', function (newFile) {
                     should.exist(newFile.jshint);
-                    newFile.jshint.success.should.equal(true);
                     
-                    should.exist(newFile.jshint.cached);
-                    newFile.jshint.cached.should.equal(true);
+                    newFile.jshint.success.should.equal(true);                    
 
                     ++a;
                 });

@@ -16,23 +16,14 @@ jshintPlugin.cached = function (opt) {
         jshintOpts = JSON.stringify(opt);
     } 
     
-    return cache.proxy('jshint', {
-        task: jshintPlugin(opt),
+    return cache(jshintPlugin(opt), {
         key: function (file) {
             return [file.contents.toString('utf8'), jshintVersion, jshintOpts].join('');
         },
         success: function (jshintedFile) {
             return jshintedFile.jshint.success;
         },
-        value: function (jshintedFile) {
-            var result = {
-                jshint: {
-                    success: jshintedFile.jshint.success,
-                    cached: true
-                }
-            };
-            return result;
-        }
+        value: 'jshint'
     });
 };
 
