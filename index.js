@@ -4,7 +4,7 @@ var fs = require('fs'),
     jshintPlugin = require('gulp-jshint'),
     cache = require('gulp-cache');
 
-var jshintVersion = '0.2.4';
+var jshintVersion = '2.4.3';
 
 // Add on to the original plugin
 jshintPlugin.cached = function (opt) {

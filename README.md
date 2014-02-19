@@ -1,4 +1,4 @@
-gulp-jshint-cached ![status](https://secure.travis-ci.org/jgable/gulp-jshint-cached.png?branch=master)&nbsp;![dependencies](https://david-dm.org/jgable/gulp-jshint-cached.png)
+gulp-jshint-cached ![status](https://secure.travis-ci.org/jgable/gulp-jshint-cached.png?branch=master)&nbsp;[![Dependency Status](https://david-dm.org/jgable/gulp-jshint-cached.png)](https://david-dm.org/jgable/gulp-jshint-cached)
 ==================
 
 A cached version of the [gulp-jshint](https://github.com/wearefractal/gulp-jshint) task.
